@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_lost">
+
+    <fragment
+        android:id="@+id/navigation_lost"
+        android:name="com.gdpu.lostandfound.fragment.LostFragment"
+        android:label="失物" />
+
+    <fragment
+        android:id="@+id/navigation_found"
+        android:name="com.gdpu.lostandfound.fragment.FoundFragment"
+        android:label="招领" />
+
+    <fragment
+        android:id="@+id/navigation_message"
+        android:name="com.gdpu.lostandfound.fragment.MessageFragment"
+        android:label="通知" />
+
+    <fragment
+        android:id="@+id/navigation_personal"
+        android:name="com.gdpu.lostandfound.fragment.PersonalFragment"
+        android:label="我的" />
+
+</navigation>
