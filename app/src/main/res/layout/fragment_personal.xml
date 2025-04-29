@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".fragment.PersonalFragment"
     >
 
     <LinearLayout
@@ -20,7 +21,7 @@
             android:gravity="bottom|center"
             android:paddingBottom="15dp"
             android:rotationX="2"
-            android:text="个人信息"
+            android:text="个人页面"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="28sp" />

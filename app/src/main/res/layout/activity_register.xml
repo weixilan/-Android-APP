@@ -90,7 +90,8 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="50dp"
                 android:text="女"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:checked="true"/>
 
             <RadioButton
                 android:id="@+id/male"

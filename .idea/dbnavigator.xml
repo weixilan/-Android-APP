@@ -4,8 +4,17 @@
     <mappings />
     <preferences />
   </component>
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
-    <assistants />
+    <assistants>
+      <assistant-state connection-id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
+    </assistants>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
@@ -14,12 +23,35 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1cb3ec09-0948-4c65-8fc3-c528e9295ff4">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99">
+      <console name="AndroidAPP" type="STANDARD" schema="" session="Main" />
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatabaseSessionManager">
+    <connection id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99" dataset="main.User" active-filter-id="EMPTY_FILTER">
+      <filter id="2bb44295-d74a-40d4-818b-1c32f157e48c" name="1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99" dataset="main.Lost" active-filter-id="EMPTY_FILTER" />
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <execution-variables-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -27,13 +59,13 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1cb3ec09-0948-4c65-8fc3-c528e9295ff4" active="true" signed="true">
+      <connection id="e4f3bdc0-e107-4c91-9f42-54d1b4d1dc99" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="AndroidAPP" />
           <description value="" />
           <database-type value="SQLITE" />
           <config-type value="BASIC" />
-          <database-version value="9999.0" />
+          <database-version value="3.49" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
@@ -44,7 +76,7 @@
           <tns-folder value="" />
           <tns-profile value="" />
           <files>
-            <file path="sqlite.db" schema="main" />
+            <file path="D:\Android Program\LostAndFound\app\data\laf.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />

@@ -13,10 +13,12 @@ class FoundAdapter(val foundList:List<Found>) : RecyclerView.Adapter<FoundAdapte
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val foundImage :ImageView=view.findViewById(R.id.foundImage)
         val foundName : TextView=view.findViewById(R.id.foundName)
+        val foundTime : TextView=view.findViewById(R.id.foundTime)
+        val foundAddress : TextView=view.findViewById(R.id.foundAddress)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.found_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_found,parent,false)
         return ViewHolder(view)
     }
 
@@ -24,6 +26,8 @@ class FoundAdapter(val foundList:List<Found>) : RecyclerView.Adapter<FoundAdapte
         val found = foundList[position]
         holder.foundImage.setImageResource(found.imageId)
         holder.foundName.text=found.name
+        holder.foundTime.text=found.time
+        holder.foundAddress.text=found.address
     }
 
     override fun getItemCount() = foundList.size

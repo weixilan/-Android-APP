@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".KotlinStudyApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,10 +14,19 @@
         android:theme="@style/Theme.LostAndFound"
         tools:targetApi="31">
         <activity
-            android:name=".home.HomeActivity"
+            android:name=".activity.PersonalInfoActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.LostActivity"
+            android:name=".activity.OldPubActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.AddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".activity.RegisterActivity"

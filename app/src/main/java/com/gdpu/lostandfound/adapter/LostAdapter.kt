@@ -13,10 +13,12 @@ class LostAdapter(val lostList:List<Lost>) : RecyclerView.Adapter<LostAdapter.Vi
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val lostImage :ImageView=view.findViewById(R.id.lostImage)
         val lostName : TextView=view.findViewById(R.id.lostName)
+        val lostTime : TextView=view.findViewById(R.id.lostTime)
+        val lostAddress : TextView=view.findViewById(R.id.lostAddress)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.lost_item,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_lost,parent,false)
         return ViewHolder(view)
     }
 
@@ -24,6 +26,8 @@ class LostAdapter(val lostList:List<Lost>) : RecyclerView.Adapter<LostAdapter.Vi
         val lost = lostList[position]
         holder.lostImage.setImageResource(lost.imageId)
         holder.lostName.text=lost.name
+        holder.lostTime.text=lost.time
+        holder.lostAddress.text=lost.address
     }
 
     override fun getItemCount() = lostList.size
