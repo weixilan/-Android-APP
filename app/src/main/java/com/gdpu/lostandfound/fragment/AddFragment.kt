@@ -1,6 +1,7 @@
 package com.gdpu.lostandfound.fragment
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
@@ -36,7 +37,6 @@ private const val ARG_PARAM2 = "param2"
  */
 class AddFragment(val title: String) : Fragment() {
     private lateinit var dbHelper : LAFDatabaseHelper
-    private var user_id : String= arguments?.get("user_id").toString()
 
     private lateinit var name : String
     private lateinit var details : String
@@ -95,6 +95,10 @@ class AddFragment(val title: String) : Fragment() {
         type = view.findViewById<RadioButton>(types.checkedRadioButtonId).text.toString()
         Toast.makeText(requireContext(),"$type",Toast.LENGTH_SHORT).show()
 
+        val user = requireContext().getSharedPreferences("User",Context.MODE_PRIVATE)
+        val id =user.getString("user_id" ,"")
+        Toast.makeText(requireContext(),"$id",Toast.LENGTH_SHORT).show()
+
         val db = dbHelper.writableDatabase
 
         if (type == "失物") {
@@ -105,7 +109,7 @@ class AddFragment(val title: String) : Fragment() {
                 put("lost_address", address)
                 put("lost_phone", phone)
 //                put("lost_image",image)
-//                put("user_id",user_id)
+                put("user_id",id)
             }
             val newRowId = db.insert("Lost", null, values)
         }
@@ -118,7 +122,7 @@ class AddFragment(val title: String) : Fragment() {
                 put("find_address", address)
                 put("find_phone", phone)
 //                put("find_image",image)
-//                put("user_id",user_id)
+                put("user_id",id)
             }
             val newRowId = db.insert("Found", null, values)
 

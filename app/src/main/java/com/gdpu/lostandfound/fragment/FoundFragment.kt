@@ -11,10 +11,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gdpu.lostandfound.R
 import com.gdpu.lostandfound.adapter.FoundAdapter
-import com.gdpu.lostandfound.adapter.LostAdapter
 import com.gdpu.lostandfound.db.LAFDatabaseHelper
 import com.gdpu.lostandfound.pojo.Found
-import com.gdpu.lostandfound.pojo.Lost
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -58,7 +56,7 @@ class FoundFragment : Fragment() {
     private fun initFound() {
         val db = dbHelper.writableDatabase
         val cursor = db.query("Found",null,null,null,null,null,null)
-        Toast.makeText(requireContext(),"${cursor.count}", Toast.LENGTH_SHORT).show()
+//        Toast.makeText(requireContext(),"${cursor.count}", Toast.LENGTH_SHORT).show()
         if(cursor.moveToFirst()){
             do{
                 val name=cursor.getString(cursor.getColumnIndex("find_name"))
@@ -67,6 +65,7 @@ class FoundFragment : Fragment() {
                 foundList.add(Found("标题：$name", "时间：$time","地址：$address",R.drawable.iconmonstr_mail_thin_240))
             }while (cursor.moveToNext())
         }
+        cursor.close()
 //        repeat(2) {
 //            foundList.add(Found("1", R.drawable.iconmonstr_mail_thin_240))
 //            foundList.add(Found("2", R.drawable.iconmonstr_mail_thin_240))

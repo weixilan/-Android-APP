@@ -1,6 +1,7 @@
 package com.gdpu.lostandfound.fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,8 +11,10 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gdpu.lostandfound.R
+import com.gdpu.lostandfound.activity.DetailsActivity
 import com.gdpu.lostandfound.adapter.LostAdapter
 import com.gdpu.lostandfound.db.LAFDatabaseHelper
+import com.gdpu.lostandfound.home.HomeActivity
 import com.gdpu.lostandfound.pojo.Lost
 
 // TODO: Rename parameter arguments, choose names that match
@@ -55,7 +58,7 @@ class LostFragment : Fragment() {
     private fun initLost() {
         val db = dbHelper.writableDatabase
         val cursor = db.query("Lost",null,null,null,null,null,null)
-        Toast.makeText(requireContext(),"${cursor.count}",Toast.LENGTH_SHORT).show()
+//        Toast.makeText(requireContext(),"${cursor.count}",Toast.LENGTH_SHORT).show()
         if(cursor.moveToFirst()){
             do{
                 val name=cursor.getString(cursor.getColumnIndex("lost_name"))

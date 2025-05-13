@@ -13,6 +13,10 @@ class OldPubAdapter(val oldPubList:List<OldPub>) : RecyclerView.Adapter<OldPubAd
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
         val oldPubImage :ImageView=view.findViewById(R.id.oldPubImage)
         val oldPubName : TextView=view.findViewById(R.id.oldPubName)
+        val oldPubTime : TextView=view.findViewById(R.id.oldPubTime)
+        val oldPubAddress : TextView=view.findViewById(R.id.oldPubAddress)
+//        val oldPubUpdate : TextView=view.findViewById(R.id.oldPubUpdate)
+//        val oldPubDelete : TextView=view.findViewById(R.id.oldPubDelete)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -24,6 +28,9 @@ class OldPubAdapter(val oldPubList:List<OldPub>) : RecyclerView.Adapter<OldPubAd
         val oldPub = oldPubList[position]
         holder.oldPubImage.setImageResource(oldPub.imageId)
         holder.oldPubName.text=oldPub.name
+        holder.oldPubTime.text=oldPub.time
+        holder.oldPubAddress.text=oldPub.address
+//        holder.oldPubUpdate.
     }
 
     override fun getItemCount() = oldPubList.size

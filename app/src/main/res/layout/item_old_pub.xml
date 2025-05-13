@@ -7,20 +7,20 @@
 
 
     <ImageView
-        android:id="@+id/lostImage"
+        android:id="@+id/oldPubImage"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="10dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="302dp"
         android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/lostName"
+            android:id="@+id/oldPubName"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
@@ -31,7 +31,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/lostTime"
+            android:id="@+id/oldPubTime"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
@@ -41,7 +41,7 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/lostAddress"
+            android:id="@+id/oldPubAddress"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center_vertical"
@@ -49,4 +49,31 @@
             android:layout_marginRight="10dp"
             android:textColor="@color/black"
             android:textSize="16sp" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/oldPubUpdate"-->
+<!--            android:layout_width="47dp"-->
+<!--            android:layout_height="49dp"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:background="@drawable/iconmonstr_trash_can_lined_240" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/oldPubDelete"-->
+<!--            android:layout_width="44dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_marginTop="2dp"-->
+<!--            android:layout_marginRight="5dp"-->
+<!--            android:layout_marginBottom="2dp"-->
+<!--            android:background="@drawable/iconmonstr_pencil_square_lined_240" />-->
+<!--    </LinearLayout>-->
+
 </LinearLayout>
